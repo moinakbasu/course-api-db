@@ -16,8 +16,6 @@ public class CourseController {
 	@Autowired
 	private CourseService courseService;
 
-	}
-
 	@RequestMapping("/topics/{topicId}/courses/{id}")
 	public Course getCourse(@PathVariable String topicId, @PathVariable String id) {
 		return courseService.getCourse(id);
