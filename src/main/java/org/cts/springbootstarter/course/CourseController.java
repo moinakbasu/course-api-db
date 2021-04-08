@@ -23,7 +23,6 @@ public class CourseController {
 
 	@RequestMapping("/topics/{topicId}/courses/{id}")
 	public Course getCourse(@PathVariable String topicId, @PathVariable String id) {
-		//moinak
 		return courseService.getCourse(id);
 	}
 
@@ -39,8 +38,8 @@ public class CourseController {
 		courseService.updateCourse(course);
 	}
 
-	/*@RequestMapping(value = "/topics/{topicId}/courses/{id}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/topics/{topicId}/courses/{id}", method = RequestMethod.DELETE)
 	public void deleteTopic(@PathVariable String id) {
 		courseService.deleteCourse(id);
-	}*/
+	}
 }
