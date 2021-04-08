@@ -21,10 +21,10 @@ public class CourseController {
 		return courseService.getAllCourses(id);
 	}
 
-	@RequestMapping("/topics/{topicId}/courses/{id}")
+	/*@RequestMapping("/topics/{topicId}/courses/{id}")
 	public Course getCourse(@PathVariable String topicId, @PathVariable String id) {
 		return courseService.getCourse(id);
-	}
+	}*/
 
 	@RequestMapping(value = "/topics/{topicId}/courses", method = RequestMethod.POST)
 	public void addCourse(@RequestBody Course course, @PathVariable String topicId) {
