@@ -21,12 +21,6 @@ public class CourseController {
 		return courseService.getAllCourses(id);
 	}
 
-	@RequestMapping("/topics/{topicId}/courses/{id}")
-	public Course getCourse(@PathVariable String topicId, @PathVariable String id) {
-		//moinak
-		return courseService.getCourse(id);
-	}
-
 	@RequestMapping(value = "/topics/{topicId}/courses", method = RequestMethod.POST)
 	public void addCourse(@RequestBody Course course, @PathVariable String topicId) {
 		course.setTopic(new Topic(topicId, "", ""));
