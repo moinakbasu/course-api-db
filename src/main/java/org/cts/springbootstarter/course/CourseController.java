@@ -23,6 +23,7 @@ public class CourseController {
 
 	@RequestMapping("/topics/{topicId}/courses/{id}")
 	public Course getCourse(@PathVariable String topicId, @PathVariable String id) {
+		//moinak
 		return courseService.getCourse(id);
 	}
 
